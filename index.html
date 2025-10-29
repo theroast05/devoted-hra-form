@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoted D-SNP Health Risk Assessment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .form-header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .form-header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        .form-body {
+            padding: 40px 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 25px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        
+        .question-group {
+            margin-bottom: 25px;
+        }
+        
+        .question-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .required {
+            color: #e74c3c;
+            margin-left: 4px;
+        }
+        
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        input[type="radio"], input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        input[type="text"], input[type="email"], input[type="tel"], 
+        input[type="date"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        
+        input[type="text"]:focus, input[type="email"]:focus, 
+        input[type="tel"]:focus, input[type="date"]:focus,
+        input[type="number"]:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .submit-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-button:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .form-header h1 {
+                font-size: 24px;
+            }
+            
+            .form-body {
+                padding: 30px 20px;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Health Risk Assessment</h1>
+            <p>Devoted D-SNP Member Questionnaire</p>
+        </div>
+        
+        <form class="form-body" action="https://formsubmit.co/seth.livingston@mytrustedhc.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Devoted D-SNP Health Risk Assessment Submission">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+            
+            <!-- Section 1: Member Information -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">1</span>
+                    Member Information
+                </h2>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Full Name <span class="required">*</span>
+                    </label>
+                    <input type="text" name="Full_Name" required>
+                </div>
+                
+                <div class="two-column">
+                    <div class="question-group">
+                        <label class="question-label">
+                            Phone Number <span class="required">*</span>
+                        </label>
+                        <input type="tel" name="Phone_Number" required>
+                    </div>
+                    
+                    <div class="question-group">
+                        <label class="question-label">
+                            Email Address
+                        </label>
+                        <input type="email" name="Email_Address">
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="question-group">
+                        <label class="question-label">
+                            Member ID <span class="required">*</span>
+                        </label>
+                        <input type="text" name="Member_ID" required>
+                    </div>
+                    
+                    <div class="question-group">
+                        <label class="question-label">
+                            Assessment Date <span class="required">*</span>
+                        </label>
+                        <input type="date" name="Assessment_Date" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 2: Health Conditions -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">2</span>
+                    Health Conditions
+                </h2>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Do you have diabetes? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Has_Diabetes" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Has_Diabetes" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Do you have cardiovascular disease? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Has_Cardiovascular_Disease" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Has_Cardiovascular_Disease" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3: Lifestyle & Habits -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">3</span>
+                    Lifestyle & Habits
+                </h2>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Do you smoke now or have you in the past? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Smoking_History" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Smoking_History" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Do you exercise regularly? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Exercises_Regularly" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Exercises_Regularly" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Do you have 2 or more alcoholic drinks per day? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Alcohol_Consumption" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Alcohol_Consumption" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 4: Preventive Care -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">4</span>
+                    Preventive Care
+                </h2>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Have you ever had your pneumonia shot? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Pneumonia_Shot" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Pneumonia_Shot" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Have you done your colorectal cancer screening? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Colorectal_Screening" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Colorectal_Screening" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 5: Recent Health Events -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">5</span>
+                    Recent Health Events (Last 12 Months)
+                </h2>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Have you gotten a flu shot in the last 12 months? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Flu_Shot" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Flu_Shot" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Have you fallen in the last 12 months? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Recent_Falls" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Recent_Falls" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Have you gotten care in the emergency room or hospital in the last 12 months? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="ER_Hospital_Visit" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="ER_Hospital_Visit" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 6: Independence & Daily Living -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">6</span>
+                    Independence & Daily Living
+                </h2>
+                
+                <p style="margin-bottom: 20px; color: #666;">Do you need help with any of the following activities?</p>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Getting in and out of bed? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Bed_Transfer" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Bed_Transfer" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Eating food? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Eating" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Eating" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Dressing yourself? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Dressing" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Dressing" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Bathing? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Bathing" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Bathing" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Using the restroom? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Restroom" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Help_Restroom" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Do you regularly get help from a family member or friend with your medications or medical care? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Receives_Care_Help" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Receives_Care_Help" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Are you confident that you can manage your own care at home? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Confident_Self_Care" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Confident_Self_Care" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 7: Well-Being -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">7</span>
+                    Well-Being
+                </h2>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        In general, how would you describe your quality of life? <span class="required">*</span>
+                    </label>
+                    <select name="Quality_of_Life" required>
+                        <option value="">-- Select One --</option>
+                        <option value="Excellent">Excellent</option>
+                        <option value="Very Good">Very Good</option>
+                        <option value="Good">Good</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        How would you rate your pain level over the last 7 days? (0 = no pain, 10 = worst pain) <span class="required">*</span>
+                    </label>
+                    <select name="Pain_Level" required>
+                        <option value="">-- Select One --</option>
+                        <option value="0">0 - No Pain</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10 - Worst Pain</option>
+                    </select>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Do you regularly feel anxious or depressed? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Anxiety_Depression" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Anxiety_Depression" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 8: Social Determinants of Health -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">8</span>
+                    Social Support & Resources
+                </h2>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Are you worried that in the next 2 months, you may not have stable housing? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Housing_Concern" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Housing_Concern" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        In the last 12 months, did you ever eat less than you felt you should because there wasn't enough money for food? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Food_Insecurity" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Food_Insecurity" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        In the last 12 months, did you ever go without health care because you didn't have a way to get there? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Transportation_Barrier" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Transportation_Barrier" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 9: Physical Measurements -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">9</span>
+                    Physical Measurements
+                </h2>
+                
+                <div class="two-column">
+                    <div class="question-group">
+                        <label class="question-label">
+                            Height (Feet) <span class="required">*</span>
+                        </label>
+                        <input type="number" name="Height_Feet" min="3" max="8" required>
+                    </div>
+                    
+                    <div class="question-group">
+                        <label class="question-label">
+                            Height (Inches) <span class="required">*</span>
+                        </label>
+                        <input type="number" name="Height_Inches" min="0" max="11" required>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Weight (pounds) <span class="required">*</span>
+                    </label>
+                    <input type="number" name="Weight_Pounds" min="50" max="500" required>
+                    <p style="font-size: 14px; color: #666; margin-top: 8px;">
+                        Best guess is fine if you haven't weighed yourself recently.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Section 10: Agent Information -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-number">10</span>
+                    Agent Information
+                </h2>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Were you, the agent, in the beneficiary's residence when you completed this HRA? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Agent_In_Residence" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Agent_In_Residence" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Did you, the agent, review safe medication disposal details with them? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Reviewed_Med_Disposal" value="Yes" required>
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Reviewed_Med_Disposal" value="No" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Agent Name <span class="required">*</span>
+                    </label>
+                    <input type="text" name="Agent_Name" required>
+                </div>
+                
+                <div class="question-group">
+                    <label class="question-label">
+                        Additional Notes (Optional)
+                    </label>
+                    <textarea name="Additional_Notes" placeholder="Any additional information or concerns..."></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-button">Submit Health Risk Assessment</button>
+        </form>
+    </div>
+</body>
+</html>
